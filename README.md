@@ -1,6 +1,9 @@
 # Applied Functional Programming Workshop Check Project
 This repository helps workshop attendees to verify the required installation.
 
+Course description (Italian):
+[Applied Functional Programming Workshop](https://www.avanscoperta.it/it/training/applied-functional-programming-workshop/)
+
 ## Requirements
 - Java (JDK) version 8 or higher
 - Scala version 2.12.x (https://www.scala-lang.org/download/)
