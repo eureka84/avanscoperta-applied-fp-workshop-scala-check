@@ -1,16 +1,28 @@
 package check
 
-import org.scalatest.FunSuite
+import minitest._
 
-class SetSuite extends FunSuite {
-
-  test("An empty Set should have size 0") {
-    assert(Set.empty.size == 0)
+object MySimpleSuite extends SimpleTestSuite {
+  test("should be") {
+    assertEquals(2, 1 + 1)
   }
 
-  test("Invoking head on an empty Set should produce NoSuchElementException") {
-    assertThrows[NoSuchElementException] {
-      Set.empty.head
+  test("should not be") {
+    assert(1 + 1 != 3)
+  }
+
+  test("should throw") {
+    class DummyException extends RuntimeException("DUMMY")
+    def run(): Unit = throw new DummyException
+
+    intercept[DummyException] {
+      run()
+    }
+  }
+
+  test("test result of") {
+    assertResult("hello world") {
+      "hello" + " " + "world"
     }
   }
 }

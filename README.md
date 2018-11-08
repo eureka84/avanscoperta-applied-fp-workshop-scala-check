@@ -23,15 +23,12 @@ sbt:global> test
 ```
 After downloading missing dependencies and running tests the result will be like the following.
 ```
-[info] SetSuite:
-[info] - An empty Set should have size 0
-[info] - Invoking head on an empty Set should produce NoSuchElementException
-[info] Run completed in 112 milliseconds.
-[info] Total number of tests run: 2
-[info] Suites: completed 1, aborted 0
-[info] Tests: succeeded 2, failed 0, canceled 0, ignored 0, pending 0
-[info] All tests passed.
-[success] Total time: 0 s, completed Nov 7, 2018 11:43:09 PM
+[info] check.MySimpleSuite
+[info] - should be
+[info] - should not be
+[info] - should throw
+[info] - test result of
+[info] Passed: Total 4, Failed 0, Errors 0, Passed 4
 ```
 
 ## Import SBT project in IntelliJ IDEA

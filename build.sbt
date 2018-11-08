@@ -17,8 +17,8 @@ lazy val settings = Seq(
   scalacOptions ++= scalacSettings,
   resolvers ++= resolversSettings,
   libraryDependencies ++= libsSettings,
-  addCompilerPlugin("com.olegpy"     %% "better-monadic-for" % "0.2.4"),
-  addCompilerPlugin("org.spire-math" %% "kind-projector"     % "0.9.8")
+  testFrameworks += new TestFramework("minitest.runner.Framework"),
+  addCompilerPlugin("com.olegpy" %% "better-monadic-for" % "0.2.4")
 )
 
 lazy val scalacSettings = Seq(
@@ -36,7 +36,7 @@ lazy val scalacSettings = Seq(
   "-Ypartial-unification",
   "-Yrangepos",
   "-Yno-adapted-args",
-  "-Ywarn-dead-code",  
+  "-Ywarn-dead-code",
   "-Ywarn-numeric-widen",
   "-Ywarn-value-discard",
   "-Ywarn-extra-implicit",
@@ -57,6 +57,13 @@ lazy val resolversSettings = Seq(
   Resolver.sonatypeRepo("releases")
 )
 
+val monocleVersion = "1.5.0"
 lazy val libsSettings = Seq(
-  "org.scalatest" %% "scalatest" % "3.0.5" % Test
+  "org.typelevel"              %% "cats-core"     % "1.4.0",
+  "org.typelevel"              %% "cats-effect"   % "1.0.0",
+  "org.typelevel"              %% "cats-mtl-core" % "0.4.0",
+  "com.github.julien-truffaut" %% "monocle-core"  % monocleVersion,
+  "com.github.julien-truffaut" %% "monocle-macro" % monocleVersion,
+  "net.debasishg"              %% "redisclient"   % "3.8",
+  "io.monix"                   %% "minitest"      % "2.1.1" % Test
 )
