@@ -12,13 +12,13 @@ lazy val global = project
   .settings(settings)
 
 lazy val settings = Seq(
-  scalaVersion := "2.12.7",
+  scalaVersion := "2.12.8",
   version := "0.1.0-SNAPSHOT",
   scalacOptions ++= scalacSettings,
   resolvers ++= resolversSettings,
   libraryDependencies ++= libsSettings,
   testFrameworks += new TestFramework("minitest.runner.Framework"),
-  addCompilerPlugin("com.olegpy" %% "better-monadic-for" % "0.2.4")
+  addCompilerPlugin("com.olegpy" %% "better-monadic-for" % "0.3.0")
 )
 
 lazy val scalacSettings = Seq(
@@ -59,11 +59,11 @@ lazy val resolversSettings = Seq(
 
 val monocleVersion = "1.5.0"
 lazy val libsSettings = Seq(
-  "org.typelevel"              %% "cats-core"     % "1.4.0",
-  "org.typelevel"              %% "cats-effect"   % "1.0.0",
-  "org.typelevel"              %% "cats-mtl-core" % "0.4.0",
+  "org.typelevel"              %% "cats-core"     % "1.6.0",
+  "org.typelevel"              %% "cats-effect"   % "1.3.0",
+  "org.typelevel"              %% "cats-mtl-core" % "0.5.0",
   "com.github.julien-truffaut" %% "monocle-core"  % monocleVersion,
   "com.github.julien-truffaut" %% "monocle-macro" % monocleVersion,
-  "net.debasishg"              %% "redisclient"   % "3.8",
-  "io.monix"                   %% "minitest"      % "2.1.1" % Test
+  "net.debasishg"              %% "redisclient"   % "3.9",
+  "io.monix"                   %% "minitest"      % "2.4.0" % Test
 )
