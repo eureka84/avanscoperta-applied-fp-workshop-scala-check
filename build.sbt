@@ -57,13 +57,10 @@ lazy val resolversSettings = Seq(
   Resolver.sonatypeRepo("releases")
 )
 
-val monocleVersion = "1.5.0"
 lazy val libsSettings = Seq(
   "org.typelevel"              %% "cats-core"     % "1.6.0",
   "org.typelevel"              %% "cats-effect"   % "1.3.0",
   "org.typelevel"              %% "cats-mtl-core" % "0.5.0",
-  "com.github.julien-truffaut" %% "monocle-core"  % monocleVersion,
-  "com.github.julien-truffaut" %% "monocle-macro" % monocleVersion,
   "net.debasishg"              %% "redisclient"   % "3.9",
   "io.monix"                   %% "minitest"      % "2.4.0" % Test
 )
