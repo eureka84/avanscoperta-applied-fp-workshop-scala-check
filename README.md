@@ -39,6 +39,20 @@ After downloading missing dependencies and running tests the result will be like
 [info] Passed: Total 4, Failed 0, Errors 0, Passed 4
 ```
 
+And then run the application
+
+```
+sbt:global> run
+```
+
+with the following output
+
+```
+[info] Done packaging.
+[info] Running check.Main
+Hello!
+```
+
 ## Import SBT project in IntelliJ IDEA
 
 Follow the istructions:
